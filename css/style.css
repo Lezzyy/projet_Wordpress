@@ -79,10 +79,35 @@ h1 {
   vertical-align: middle;
 }
 
-.aside {
-  float: right;
-  border-left: 2px;
+.article_1 a {
+  color:#962D3E;
+  font-weight: bold;
 }
+
+#info {
+  border-left: 2px;
+  background-color: #962D3E;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+h3
+{
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-custom {
+  background-color: #343642;
+  color: #ffffff;
+}
+
+.btn-custom:hover {
+  color: #ffffff;
+  background-color:#962D3E;
+}
+
 /*footer*/
 .footer {
   background-color: #962D3E;
@@ -103,5 +128,12 @@ width : 100%
 }
 
 #vr {
+  width: 100%;
+}
+
+/*page périphériques*/
+/*banner*/
+
+#périphériques {
   width: 100%;
 }
