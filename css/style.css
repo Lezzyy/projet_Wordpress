@@ -57,12 +57,30 @@ h1 {
 
 /*Logo*/
 
-#logo {
+.logo {
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
   color: #962D3E;
+}
+
+#logo {
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #962D3E;  
+}
+
+#date {
+  background-color: none;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+#div_horloge {
+  line-height: 5px;
 }
 
 /*article 1*/
@@ -71,21 +89,20 @@ h1 {
   width: 100%;
 }
 
-.article_1 h2 {
+.article h2 {
   text-align: center;
 }
 
-.article_1 p {
+.article p {
   vertical-align: middle;
 }
 
-.article_1 a {
+.article a {
   color:#962D3E;
   font-weight: bold;
 }
 
 #info {
-  border-left: 2px;
   background-color: #962D3E;
   color: #ffffff;
   margin-top: 5px;
