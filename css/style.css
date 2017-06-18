@@ -70,7 +70,7 @@ h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #962D3E;  
+  color: #962D3E;
 }
 
 #date {
@@ -153,4 +153,51 @@ width : 100%
 
 #périphériques {
   width: 100%;
+}
+
+/*page contact*/
+.contact h3 {
+  color : #343642;
+}
+
+.contact p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.controls-row {
+  display: block;
+  text-align: center;
+}
+
+input {
+  margin-bottom: 5px;
+  background-color: #979C9C;
+  color: #ffffff;
+}
+
+input [type=text] {
+  height:50px;
+  width: 500px;
+  border: none;
+}
+
+input [type=email] {
+  height:150px;
+  width: 250px;
+  border: none;
+}
+
+textarea {
+  height: 150px;
+  width: 250px;
+  resize: vertical;
+  background-color: #979C9C;
+  color: #ffffff;
+}
+
+/*page*/
+
+#ordi {
+  width: 80%;
 }
