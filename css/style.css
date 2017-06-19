@@ -108,6 +108,11 @@ h1 {
   margin-top: 5px;
 }
 
+#info a {
+  color: #ffffff;
+  font-size: 1em;
+}
+
 h3
 {
   font-size: 1.3em;
@@ -131,6 +136,11 @@ h3
   height: 150px;
   color:#ffffff;
   margin-top: 20px;
+}
+
+.footer p {
+  line-height: 2px;
+  text-align: center;
 }
 
 /*article 2*/
@@ -163,6 +173,7 @@ width : 100%
 .contact p {
   text-align: center;
   font-weight: bold;
+  line-height: 5px;
 }
 
 .controls-row {

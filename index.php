@@ -24,7 +24,7 @@
       <div class="container-fluid">
           <nav>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
               <li><a href="périphérique.html" target="_blank">Périphériques</a></li>
               <li><a href="applications.html" target="_blank">Applications</a></li>
               <li><a href="nouvelle_tech.html" target="_blank">Nouvelles Tech</a></li>
@@ -44,7 +44,13 @@
         <h1><u>L'Actu de la Tech</u></h1>
       </article>
       <aside id="date" class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-        <p>Aujourd'hui, nous sommes le <?php echo date ('d/m/Y'); ?></p>
+        <script type="text/javascript">
+          var maintenant=new Date();
+          var jour=maintenant.getDate();
+          var mois=maintenant.getMonth()+1;
+          var an=maintenant.getFullYear();
+          document.write("Nous sommes le ",jour,"/",mois,"/",an,".");
+        </script>
         <p>Il est :</p>
         <div id="div_horloge"></div>
         <script type="text/javascript">
@@ -78,7 +84,7 @@
        <hr class="separator">
         <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
           <a href="#"><u>Périphériques</u></a>
-          <img src="img/ordinateur.jpg" alt="ordinateur" id="ordinateur">
+          <img src="img/ordinateur.jpg" alt="ordinateur" id="ordinateur" onmouseover="javascript:this.src='img/ordi2.jpg';"onmouseout="javascript:this.src='img/ordinateur.jpg';"/>
         </article>
         <article class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <h2>Après Microsoft, Apple, Xiaomi met à jour sa gamme d’ordinateurs Mi Notebook Air</h2>
@@ -88,11 +94,11 @@
           <button class="btn btn-custom">Lire la suite</button>
         </article>
         <aside id="info" class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-          <h3>Les articles les plus consultés :</h3>
+          <h3>Les articles les plus consultés ce mois-ci :</h3>
           <ul>
-            <li>Le casque VR révolutionne les jeux vidéos</li>
-            <li>Microsoft</li>
-            <li>Apple</li>
+            <li><a href="#">Les bonnes raisons d'acheter le Playstation VR</a></li>
+            <li><a href="#">Les meilleurs applications Androïd</a></li>
+            <li><a href="#">Apple<a></li>
           </ul>
      </div>
    </div>
@@ -148,11 +154,18 @@
  <!--footer-->
  <footer class="container-fluid footer">
    <div class="container">
-     <h1>L'Actu de la Tech</h1>
-   </div>
- </footer>
+     <h1 class="col-md-6 col-lg-6 col-xs-12 col-sm-12">L'Actu de la Tech</h1>
+  <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+     <h3>Contact :</h3>
+     <p>lactudelatech@gmail.com</p></br>
+     <p>5 boulevard de la liberté</p></br>
+     <p>59000 Lille</p>
+  </div>
+</div>
+</footer>
 
 
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

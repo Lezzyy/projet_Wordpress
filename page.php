@@ -24,7 +24,7 @@
         <div class="container-fluid">
             <nav>
               <ul class="nav navbar-nav">
-                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="index.php" target="_blank">Home</a></li>
                 <li class="active"><a href="périphérique.html" target="_blank">Périphériques</a></li>
                 <li><a href="applications.html" target="_blank">Applications</a></li>
                 <li><a href="nouvelle_tech.html">Nouvelles Tech</a></li>
@@ -65,9 +65,15 @@
       <!--footer-->
       <footer class="container-fluid footer">
         <div class="container">
-          <h1>L'Actu de la Tech</h1>
-        </div>
-      </footer>
+          <h1 class="col-md-6 col-lg-6 col-xs-12 col-sm-12">L'Actu de la Tech</h1>
+       <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+          <h3>Contact :</h3>
+          <p>lactudelatech@gmail.com</p></br>
+          <p>5 boulevard de la liberté</p></br>
+          <p>59000 Lille</p>
+       </div>
+     </div>
+     </footer>
 
 
 
