@@ -30,6 +30,7 @@
               <li><a href="applications.html" target="_blank">Applications</a></li>
               <li><a href="nouvelle_tech.html" target="_blank">Nouvelles Tech</a></li>
               <li><a href="contact.php" target="_blank">Contact</a></li>
+              <li><a id="chrono"></a></li>
             </ul>
           </nav>
       </div>
@@ -45,17 +46,15 @@
         <h1><u>L'Actu de la Tech</u></h1>
       </article>
       <aside class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-          <p id="date">
-          <script type="text/javascript">
-            var text = document.getElementById('date');
+          <div id="div_date">
+            <script type="text/javascript">
             var maintenant=new Date();
             var jour=maintenant.getDate();
             var mois=maintenant.getMonth()+1;
             var an=maintenant.getFullYear();
             document.write("Nous sommes le ",jour,"/",mois,"/",an,".");
-          </script>
-          </p>
-        <p>Il est :</p>
+            </script>
+          </div></br>
         <div id="div_horloge"></div>
       </aside>
     </section>
@@ -151,7 +150,8 @@
 </footer>
 
 
-<script type="text/javascript" src="heure.js"></script>
+<script type="text/javascript" src="Boilerplate/js/chrono.js"></script>
+<script type="text/javascript" src="Boilerplate/js/heure.js"></script>
 
 </body>
 </html>
