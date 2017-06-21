@@ -69,8 +69,11 @@
        <hr class="separator">
         <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
           <a href="#"><u>Périphériques</u></a>
-          <img src="img/ordinateur.jpg" alt="ordinateur" id="ordinateur" onmouseover="javascript:this.src='img/ordi2.jpg';"onmouseout="javascript:this.src='img/ordinateur.jpg';"/>
+          <img src="img/ordinateur.jpg" alt="ordinateur_portable" id="ordinateur" onmouseover="affi_alt()"/>
+          <p id="demo"></p>
         </article>
+
+
         <article class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <h2>Après Microsoft, Apple, Xiaomi met à jour sa gamme d’ordinateurs Mi Notebook Air</h2>
           <p>
@@ -89,6 +92,13 @@
    </div>
  </section>
 
+ <script type="text/javascript">
+ function affi_alt () {
+   var x = document.getElementById('ordinateur').attributes[1].value;
+   document.getElementById('demo').innerHTML=x;
+   }
+ </script>
+
  <!--article 2-->
  <section class="container-fluid article">
    <div class="container">
@@ -105,6 +115,28 @@
         <article class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <img src="img/smartphone.jpg" alt="smartphone" id="smartphone">
         </article>
+        <aside class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+          <div class="tab">
+            <button class="tablinks" onclick="openRs(evt,'Facebook')">Facebook</button>
+            <button class="tablinks" onclick="openRs(evt,'Twitter')">Twitter</button>
+            <button class="tablinks" onclick="openRs(evt,'Linkedin')">LinkedIn</button>
+          </div>
+
+          <div id="Facebook" class="tabcontent">
+            <h3>Facebook</h3>
+            <p>Mai 2017 : 1,9 milliards d'utilisateurs actifs.</p>
+          </div>
+
+          <div id="Twitter" class="tabcontent">
+            <h3>Twitter</h3>
+            <p>Janvier 2017 : 328 millions d'utilisateurs actifs.</p>
+          </div>
+
+          <div id="Linkedin" class="tabcontent">
+            <h3>LinkedIn</h3>
+            <p>Avril 2017 : 100 millions d'utilisateurs actifs.</p>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
@@ -139,8 +171,8 @@
  <!--footer-->
  <footer class="container-fluid footer">
    <div class="container">
-     <h1 class="col-md-6 col-lg-6 col-xs-12 col-sm-12">L'Actu de la Tech</h1>
-  <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+     <h1 class="col-md-6 col-lg-6 col-xs-6 col-sm-6">L'Actu de la Tech</h1>
+  <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
      <h3>Contact :</h3>
      <p>lactudelatech@gmail.com</p></br>
      <p>5 boulevard de la liberté</p></br>

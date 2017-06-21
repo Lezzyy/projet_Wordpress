@@ -9,7 +9,7 @@ function horloge(el) {
     var str = date.getHours();
     str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
     str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
-    el.innerHTML = str;
+    el.innerHTML = "Il est : " + str;
   }
   actualiser();
   setInterval(actualiser,1000);
