@@ -28,7 +28,7 @@
               <li><a href="périphérique.html" target="_blank">Périphériques</a></li>
               <li><a href="applications.html" target="_blank">Applications</a></li>
               <li><a href="nouvelle_tech.html" target="_blank">Nouvelles Tech</a></li>
-              <li><a href="#" target="_blank">Contact</a></li>
+              <li><a href="contact.php" target="_blank">Contact</a></li>
             </ul>
           </nav>
       </div>
@@ -43,14 +43,15 @@
       <article class="col-md-9 col-lg-9 col-xs-12 col-sm-12">
         <h1><u>L'Actu de la Tech</u></h1>
       </article>
-      <aside id="date" class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-        <script type="text/javascript">
+      <aside class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+          <script type="text/javascript">
           var maintenant=new Date();
           var jour=maintenant.getDate();
           var mois=maintenant.getMonth()+1;
           var an=maintenant.getFullYear();
           document.write("Nous sommes le ",jour,"/",mois,"/",an,".");
-        </script>
+          </script>
+
         <p>Il est :</p>
         <div id="div_horloge"></div>
         <script type="text/javascript">
@@ -163,9 +164,6 @@
   </div>
 </div>
 </footer>
-
-
-<script src="bootstrap-3.3.7-dist/js/date.js"></script>
 
 </body>
 </html>

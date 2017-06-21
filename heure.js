@@ -1,4 +1,3 @@
-div id="div_horloge"></div>
 window.onload=function() {
   horloge('div_horloge');
 };
