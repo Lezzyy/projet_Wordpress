@@ -1,109 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>HOME</title>
-
-  <!--font-->
-   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
-
-  <!--css-->
-  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  </head>
-
-  <!--contenu du site-->
-  <body>
-
-<!--header-->
-<header>
-  <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-          <nav>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="index.php">Home</a></li>
-              <li><a href="périphérique.html" target="_blank">Périphériques</a></li>
-              <li><a href="applications.html" target="_blank">Applications</a></li>
-              <li><a href="nouvelle_tech.html" target="_blank">Nouvelles Tech</a></li>
-              <li><a href="contact.php" target="_blank">Contact</a></li>
-            </ul>
-          </nav>
-      </div>
-  </nav>
-</header>
-<!--end header-->
-
-<!--logo-->
-<section class="container-fluid logo">
-  <div class="container">
-    <div class="row">
-      <article class="col-md-9 col-lg-9 col-xs-12 col-sm-12">
-        <h1><u>L'Actu de la Tech</u></h1>
-      </article>
-      <aside class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-          <script type="text/javascript">
-          var maintenant=new Date();
-          var jour=maintenant.getDate();
-          var mois=maintenant.getMonth()+1;
-          var an=maintenant.getFullYear();
-          document.write("Nous sommes le ",jour,"/",mois,"/",an,".");
-          </script>
-
-        <p>Il est :</p>
-        <div id="div_horloge"></div>
-        <script type="text/javascript">
-        window.onload=function() {
-          horloge('div_horloge');
-        };
-
-        function horloge(el) {
-          if(typeof el=="string") { el = document.getElementById(el); }
-          function actualiser() {
-            var date = new Date();
-            var str = date.getHours();
-            str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
-            str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
-            el.innerHTML = str;
-          }
-          actualiser();
-          setInterval(actualiser,1000);
-        }
-        </script>
-      </aside>
-    </section>
-
-
-<!--end logo-->
-
+<?php get_header(); ?>
 <!--Article 1-->
+<div id="main">
+<div id="content">
  <section class="container-fluid article">
    <div class="container">
      <div class="row">
        <hr class="separator">
         <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
           <a href="#"><u>Périphériques</u></a>
-          <img src="img/ordinateur.jpg" alt="ordinateur" id="ordinateur" onmouseover="javascript:this.src='img/ordi2.jpg';"onmouseout="javascript:this.src='img/ordinateur.jpg';"/>
+          <img src="img/ordinateur.jpg" alt="ordinateur_portable" id="ordinateur" onmouseover="affi_alt()"/>
+          <p id="demo"></p>
         </article>
+
+
         <article class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <h2>Après Microsoft, Apple, Xiaomi met à jour sa gamme d’ordinateurs Mi Notebook Air</h2>
           <p>
             Microsoft a récemment publié ses nouveaux ordinateurs Surface Pro et Surface Laptop avec du matériel de dernière génération, et maintenant d’autres fabricants modernisent leurs appareils avec de nouvelles puces, davantage de mémoire vive (RAM)...
           </p>
           <button class="btn btn-custom">Lire la suite</button>
+          <p>Posted on <?php the_time('F jS, Y') ?></p>
         </article>
-        <aside id="info" class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-          <h3>Les articles les plus consultés ce mois-ci :</h3>
-          <ul>
-            <li><a href="#">Les bonnes raisons d'acheter le Playstation VR</a></li>
-            <li><a href="#">Les meilleurs applications Androïd</a></li>
-            <li><a href="#">Apple<a></li>
-          </ul>
+        <?php get_sidebar(); ?>
      </div>
    </div>
  </section>
+
+
 
  <!--article 2-->
  <section class="container-fluid article">
@@ -113,14 +36,17 @@
         <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
           <a href="#"><u>Périphériques</u></a>
           <h2>Le HTC U11 échoue son test de durabilité avec un écran fissuré</h2>
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <p>
             Le HTC U11 a été officiellement annoncé au mois de mai, et l’appareil apporte beaucoup d’améliorations et de fonctionnalités à sa gamme de smartphones. Mais s’il excelle, le HTC U11 a récemment été soumis...
           </p>
             <button class="btn btn-custom">Lire la suite</button>
+          <p>Posted on <?php the_time('F jS, Y') ?></p>
         </article>
         <article class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
           <img src="img/smartphone.jpg" alt="smartphone" id="smartphone">
         </article>
+        <?php get_sidebar_tab(); ?>
       </div>
     </div>
   </section>
@@ -138,6 +64,7 @@
              La conférence lors de l’E3 2017 de Sony vient près de 8 mois après la sortie de son casque de réalité virtuelle (VR), le PlayStation VR. Cet évènement mondial dédié à tous les gamers...
            </p>
              <button class="btn btn-custom">Lire la suite</button>
+          <p>Posted on <?php the_time('F jS, Y') ?></p>
          </article>
          <article class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
           <a href="#"><u>Applications</u></a>
@@ -147,23 +74,14 @@
              Google recherche de nouvelles façons de promouvoir et d’afficher des applications et des jeux qui offrent une expérience Android de haute qualité. Et, à cette fin, la société a lancé Android Excellence, un nouveau programme...
            </p>
             <button class="btn btn-custom">Lire la suite</button>
+           <p>Posted on <?php the_time('F jS, Y') ?></p>
          </article>
        </div>
      </div>
    </section>
+ </div>
+ </div>
+   <div>
 
- <!--footer-->
- <footer class="container-fluid footer">
-   <div class="container">
-     <h1 class="col-md-6 col-lg-6 col-xs-12 col-sm-12">L'Actu de la Tech</h1>
-  <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
-     <h3>Contact :</h3>
-     <p>lactudelatech@gmail.com</p></br>
-     <p>5 boulevard de la liberté</p></br>
-     <p>59000 Lille</p>
-  </div>
-</div>
-</footer>
-
-</body>
-</html>
+   </div>
+   <?php get_footer(); ?>
