@@ -92,12 +92,7 @@
    </div>
  </section>
 
- <script type="text/javascript">
- function affi_alt () {
-   var x = document.getElementById('ordinateur').attributes[1].value;
-   document.getElementById('demo').innerHTML=x;
-   }
- </script>
+
 
  <!--article 2-->
  <section class="container-fluid article">
@@ -117,9 +112,9 @@
         </article>
         <aside class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
           <div class="tab">
-            <button class="tablinks" onclick="openRs(evt,'Facebook')">Facebook</button>
-            <button class="tablinks" onclick="openRs(evt,'Twitter')">Twitter</button>
-            <button class="tablinks" onclick="openRs(evt,'Linkedin')">LinkedIn</button>
+            <button class="tablinks" onclick="openRs(event,'Facebook')">Facebook</button>
+            <button class="tablinks" onclick="openRs(event,'Twitter')">Twitter</button>
+            <button class="tablinks" onclick="openRs(event,'Linkedin')">LinkedIn</button>
           </div>
 
           <div id="Facebook" class="tabcontent">
@@ -182,8 +177,7 @@
 </footer>
 
 
-<script type="text/javascript" src="Boilerplate/js/chrono.js"></script>
-<script type="text/javascript" src="Boilerplate/js/heure.js"></script>
+<script type="text/javascript" src="Boilerplate/js/main.js"></script>
 
 </body>
 </html>
