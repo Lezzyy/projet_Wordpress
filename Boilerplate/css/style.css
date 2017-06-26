@@ -1,19 +1,5 @@
 @@charset "UTF-8";
 
-/*
-
-Theme Name: Tech Blog
-
-Author: Laure-Anne
-
-Author URI:
-
-Version 1.0
-
-Description: Le premier thème WordPress !
-
-*/
-
 body, html {
   padding:0;
   margin:0;
@@ -36,10 +22,9 @@ h1 {
   padding:0;
 }
 
-.menu {
-  background-color: #343642;
-  margin : 0;
-}
+#header {
+  border: 2px #a2a2a2 solid;
+ }
 
 /*barre de navigation*/
 .navbar-inverse {
@@ -162,11 +147,6 @@ width : 100%
    /*aside2*/
    div.tab {
      overflow: hidden;
-     float: right;
-   }
-
-   #bouton_t, #bouton_l, #bouton_f {
-     width : 90px;
    }
 
 .tab button {
@@ -273,6 +253,7 @@ textarea {
 .footer p {
   line-height: 2px;
   text-align: center;
+  border: 2px #a2a2a2 solid;
 }
 
 @media screen and (max-width:480px)
